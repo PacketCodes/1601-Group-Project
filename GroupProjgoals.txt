@@ -9,3 +9,11 @@
 - We check for profanity through : https://www.purgomalum.com/
 - We do a simple message number check for spam. 
 - We allow users to block and hide messages from other users.
+
+- "Bob" Test Account: Must hardcode or create a test user with username `bob` (or `bob@mail.com`) and password `bobpass` for the assessors to use
+- PWA Integration: Must include a valid `manifest.json` file and service worker so the app is installable as a Progressive Web App
+- Add the ability for users to react to messages
+- Add a "Pin" or "Save" button so logged-in users can bookmark their favorite messages to a private list on their profile
+- Use a vibrant, island-inspired color palette for the UI.
+- Create a custom drawer for Caribbean-specific emojis/flags.
+- The use of Firebase to host
