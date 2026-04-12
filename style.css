@@ -225,3 +225,31 @@ dialog::backdrop{
     color: 
     var(--text-dark); 
 }
+
+/*Styling for mobile*/
+::selection {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    #app-container {
+        flex-direction: column; 
+    }
+
+    #left-sidebar, #right-sidebar {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #right-sidebar {
+        display: none; 
+    }
+
+    #chat-main {
+        height: 60vh; 
+    }
+}
