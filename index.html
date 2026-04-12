@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribbean Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="app-header">
+        <h1>Caribbean Chat</h1>
+        <div id="user-status">
+            <span id="current-user-name">Welcome, Guest</span>
+            <span id="current-user-flag">🏴‍☠️</span>
+        </div>
+    </header>
+
+    <div id="app-container">
+
+        <nav id="left-sidebar">
+            <div id="auth-section">
+                <h2>Login</h2>
+                <input type="text" id="username-input" placeholder="Username (bob)">
+                <input type="password" id="password-input" placeholder="Password">
+                <button id="login-btn">Sign In</button>
+                <hr>
+                <button id="guest-btn">Continue as Guest</button>
+            </div>
+            
+            <div id="rooms-section">
+                <h2>Rooms</h2>
+                <ul>
+                    <li class="active-room">Global Chat</li>
+                    <li>Pinned Messages </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="chat-main">
+            <div id="chat-feed">
+                <div class="message incoming">
+                    <div class="message-header">
+                        <span class="sender-name">Bob</span>
+                        <span class="sender-flag">🇹🇹</span>
+                    </div>
+                    <div class="message-bubble">
+                        Hello World
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-input-area">
+                <input type="text" id="message-input" placeholder="Type your message here...">
+                <button id="send-btn">Send </button>
+            </div>
+        </main>
+
+        <aside id="right-sidebar">
+            <h2>Online Now</h2>
+            <ul id="online-users-list">
+                <li>Bob</li>
+                <li>jane</li>
+                <li>🏴‍☠️ Guest_405</li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
