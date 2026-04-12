@@ -16,7 +16,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body {
+body{
     background-color: var(--bg-color);
     color: var(--text-dark);
     height: 100vh;
@@ -25,7 +25,7 @@ body {
 }
 
 
-#app-header {
+#app-header{
     background-color: var(--primary-color);
     color: white;
     padding: 15px 20px;
@@ -36,20 +36,20 @@ body {
     z-index: 10;
 }
 
-#app-header h1 {
+#app-header h1{
     font-family: 'Baloo 2', cursive;
     font-size: 24px;
 }
 
 
-#app-container {
+#app-container{
     display: flex;      
     flex: 1;            
     overflow: hidden;   
 }
 
 
-#left-sidebar, #right-sidebar {
+#left-sidebar, #right-sidebar{
     width: 250px;
     background-color: var(--sidebar-bg);
     padding: 20px;
@@ -58,7 +58,7 @@ body {
 }
 
 
-#auth-section input, #auth-section button {
+#auth-section input, #auth-section button{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -66,7 +66,7 @@ body {
     border-radius: 5px;
 }
 
-#auth-section button {
+#auth-section button{
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -74,28 +74,28 @@ body {
     font-weight: bold;
 }
 
-#auth-section button:hover {
+#auth-section button:hover{
     background-color: #e06c3f;
 }
 
-#rooms-section ul, #right-sidebar ul {
+#rooms-section ul, #right-sidebar ul{
     list-style-type: none; 
     margin-top: 15px;
 }
 
-#rooms-section li {
+#rooms-section li{
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.active-room {
+.active-room{
     background-color: var(--message-bg-in);
     font-weight: bold;
 }
 
 
-#chat-main {
+#chat-main{
     flex: 1; 
     display: flex;
     flex-direction: column;
@@ -103,24 +103,24 @@ body {
 }
 
 
-#chat-feed {
+#chat-feed{
     flex: 1; 
     padding: 20px;
     overflow-y: auto;
 }
 
 /*Chat Bubbles*/
-.message {
+.message{
     margin-bottom: 15px;
 }
 
-.message-header {
+.message-header{
     font-size: 12px;
     margin-bottom: 5px;
     color: gray;
 }
 
-.message-bubble {
+.message-bubble{
     display: inline-block;
     padding: 12px 16px; 
     background-color: var(--message-bg-in);
@@ -129,14 +129,14 @@ body {
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-#chat-input-area {
+#chat-input-area{
     display: flex;
     padding: 15px;
     background-color: white;
     border-top: 1px solid #ddd;
 }
 
-#message-input {
+#message-input{
     flex: 1;
     padding: 12px;
     border: 1px solid #ccc;
@@ -145,7 +145,7 @@ body {
     outline: none;
 }
 
-#send-btn {
+#send-btn{
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -153,4 +153,75 @@ body {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+}
+
+dialog{
+    margin: auto; 
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    background-color: var(--sidebar-bg);
+}
+
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h3{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content hr{
+    margin-bottom: 15px;
+    border: 0.5px solid #eee;
+}
+
+.reaction-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.react-btn{
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.react-btn:hover{
+    transform: scale(1.2); 
+}
+
+.action-btn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pin-msg-btn{ 
+    background-color: 
+    var(--message-bg-in); 
+    color: 
+    var(--text-dark); 
+}
+
+.block-btn{ 
+    background-color: #ff4d4d; 
+    color: white; 
+}
+
+.close-btn{ 
+    background-color: #ddd; 
+    color: 
+    var(--text-dark); 
 }
