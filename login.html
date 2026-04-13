@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#20B2AA">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribbean Chat - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <div class="login-box">
+        <h1>Caribbean Chat</h1>
+        <p class="subtitle">Sign in to start chatting</p>
+
+        <p class="error-msg" id="error-msg"></p>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button class="btn-primary" id="action-btn">Sign In</button>
+
+        <span class="toggle-link" id="toggle-link">Need an account? Register</span>
+
+        <hr>
+        <button class="btn-guest" id="guest-btn">Continue as Guest</button>
+    </div>
+
+    <script src="login.js"></script>
+
+     <script>
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('Service Worker registered!', reg))
+                .catch(err => console.error('Service Worker registration failed: ', err));
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "senderName": "bob",
+    "senderFlag": "🇹🇹",
+    "text": "Welcome to Caribbean Chat!",
+    "isPinned": false,
+    "reaction": null,
+    "blocked": false
+  },
+  {
+    "senderName": "jane",
+    "senderFlag": "🇹🇹",
+    "text": "Hey everyone, feel free to chat here.",
+    "isPinned": false,
+    "reaction": null,
+    "blocked": false
+  },
+    {
+    "senderName": "Admin",
+    "senderFlag": "🇹🇹",
+    "text": "Group project!",
+    "isPinned": true,
+    "reaction": null,
+    "blocked": false
+  }
+]

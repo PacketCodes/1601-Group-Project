@@ -1,0 +1,21 @@
+{
+  "name": "Caribbean Vibes Chat",
+  "short_name": "CaribChat",
+  "description": "A real-time Caribbean chatroom.",
+  "start_url": "/login.html",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#20B2AA",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192/20B2AA/FFFFFF?text=CC",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512/20B2AA/FFFFFF?text=CC",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+﻿Current plan.
+
+- A Caribbean focused chat room. 
+- Users can register and sign in. Guests can still chat.
+- Users can set their language.
+- Users can set their nation. Guests will have their nation flags checked through their IP and set directly. :https://ipgeolocation.io/documentation/ip-location-api.html
+- Users & guests can set their age range.
+
+- We check for profanity through : https://www.purgomalum.com/
+- We do a simple message number check for spam. 
+- We allow users to block and hide messages from other users.
+
+- We allow users to log out and Guest info is not saved. Their name is guest-xxxx
+
+ 
+- Add the ability for users to react to messages
+- Add a "Pin" or "Save" button so logged-in users can bookmark their favorite messages to a private list on their profile
+- Use a vibrant, island-inspired color palette for the UI.
+- Create a custom drawer for Caribbean-specific emojis/flags.
+- The use of Firebase to host

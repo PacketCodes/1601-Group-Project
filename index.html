@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#20B2AA">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribbean Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="app-header">
+        <h1>Caribbean Chat</h1>
+        <div id="user-status">
+            <span id="current-user-name">Welcome, Guest</span>
+            <span id="current-user-flag">🏴‍☠️</span>
+        </div>
+    </header>
+
+    <div id="app-container">
+
+        <nav id="left-sidebar">
+            <div id="auth-section">
+                <h2>Signed In</h2>
+                <p id="sidebar-user" style="margin-bottom:10px;"></p>
+                <button id="logout-btn">Log Out</button>
+            </div>
+            
+            <div id="rooms-section">
+                <h2>Rooms</h2>
+                <ul>
+                    <li class="active-room">Global Chat</li>
+                    <li>Pinned Messages </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="chat-main">
+            <div id="chat-feed">
+                <div class="message incoming">
+                    <div class="message-header">
+                        <span class="sender-name">Bob</span>
+                        <span class="sender-flag">🇹🇹</span>
+                    </div>
+                    <div class="message-bubble">
+                        Hello World
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-input-area">
+                <input type="text" id="message-input" placeholder="Type your message here..." maxlength="150">
+                <button id="send-btn">Send </button>
+            </div>
+        </main>
+
+        <aside id="right-sidebar">
+            <h2>Online Now</h2>
+            <ul id="online-users-list">
+                <li>Bob</li>
+                <li>jane</li>
+                <li>🏴‍☠️ Guest_405</li>
+            </ul>
+        </aside>
+
+    </div>
+
+     <dialog id="message-options-modal" open>
+        <div class="modal-content">
+            <h3>Message Options</h3>
+            <hr>
+            <div class="reaction-buttons">
+                <button class="react-btn">👍</button>
+                <button class="react-btn">❤️</button>
+                <button class="react-btn">🔥</button>
+                <button class="react-btn">🌴</button>
+            </div>
+            <button id="pin-msg-btn" class="action-btn">📌 Pin Message</button>
+            <button id="block-user-btn" class="action-btn block-btn">🚫 Block User</button>
+            
+            <button id="close-modal-btn" class="action-btn close-btn">Close</button>
+        </div>
+    </dialog>
+
+    <script>
+        // Redirect to login if no session
+        const chatUser = JSON.parse(sessionStorage.getItem('chatUser') || 'null');
+        if (!chatUser) { window.location.href = 'login.html'; }
+        else {
+            document.getElementById('current-user-name').textContent = 'Welcome, ' + chatUser.username;
+            document.getElementById('current-user-flag').textContent = chatUser.guest ? 'Guest' : 'Member';
+            document.getElementById('sidebar-user').textContent = chatUser.username;
+        }
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            sessionStorage.removeItem('chatUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyCw4tMSTRpwELRxoydavexJcQkI2U13lRc",
+            authDomain: "caribbean-chat-f6630.firebaseapp.com",
+            databaseURL: "https://caribbean-chat-f6630-default-rtdb.firebaseio.com",
+            projectId: "caribbean-chat-f6630",
+            storageBucket: "caribbean-chat-f6630.firebasestorage.app",
+            messagingSenderId: "912490102758",
+            appId: "1:912490102758:web:2668c46dc6da340e3c6027"
+        });
+    </script>
+    <script src="app.js"></script>
+
+    <script>
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('Service Worker registered!', reg))
+                .catch(err => console.error('Service Worker registration failed: ', err));
+            });
+        }
+    </script>
+
+   
+
+</body>
+</html>
